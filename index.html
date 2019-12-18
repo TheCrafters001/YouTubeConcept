@@ -18,21 +18,33 @@
 		
 	</head>
 	<body class="w3-theme" onload="w3_open()">
-	
 		<!-- NavBar -->
-		<div class="w3-bar w3-theme-d5 w3-large">
+		<div class="w3-bar w3-theme-d5 w3-large" style="position:inline;">
 			<button id="openNav" class="w3-button w3-theme-d5 w3-bar-item w3-mobile" onclick="w3_open()">&#9776;</button>
 			<a href="/" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 			<input type="text" class="w3-bar-item w3-input w3-bar w3-white w3-mobile" placeholder="Search..">
 			<button class="w3-bar-item w3-button w3-green w3-mobile">Go</button>
+			
+			<!-- Right Side of NavBar -->
+			<a href="/signin.html" class="w3-bar-item w3-button w3-right"><i class="fa fa-user" aria-hidden="true"></i></a>
+			<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-bell" aria-hidden="true"></i><span class="w3-badge w3-margin-left w3-white w3-small">9+</span></a>
+			<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
 		</div>
-		
 		<!-- SideBar -->
 		<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-theme-d5" style="display:none" id="mySidebar">
 			<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-			<a href="/" class="w3-bar-item w3-button">Home</a>
-			<a href="#" class="w3-bar-item w3-button">Trending</a>
-			<a href="#" class="w3-bar-item w3-button">Subscriptions</a>
+			<a href="/" class="w3-bar-item w3-button w3-animate-bottom">Home</a>
+			<a href="#" class="w3-bar-item w3-button w3-animate-bottom">Trending</a>
+			<a href="/signin.html" class="w3-bar-item w3-button w3-animate-bottom">Subscriptions</a>
+			<a href="/signin.html" class="w3-bar-item w3-button w3-animate-bottom">History</a>
+			<hr>
+			<div class="w3-bar-item w3-animate-zoom">
+				<p>Subscriptions</p>
+				<div class="w3-container w3-theme-l2 w3-center">
+					<p>You are not signed into YouTube.<br>Please sign in to see your subscriptions.</p>
+					<a href="/signin.html" class="w3-button w3-theme-l5 w3-hover-theme">Sign In</a><br><br>
+				</div>
+			</div>
 		</div>
 		
 		<div id="main" class="w3-container">
@@ -42,17 +54,17 @@
 				<div class="w3-row w3-container w3-animate-bottom">
 					<h3>Recommended</h3>
 					<div class="w3-col s4 w3-center">
-						<img alt="Video" height="150" width="250" src="https://i.ytimg.com/vi/c4VFJGLTlhQ/hqdefault.jpg?sqp=-oaymwEYCMQBEG5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAv-COBO_Dx87TqA0P3De_Cm_ChTQ" />
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://i.ytimg.com/vi/c4VFJGLTlhQ/hqdefault.jpg?sqp=-oaymwEYCMQBEG5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAv-COBO_Dx87TqA0P3De_Cm_ChTQ" /></a>
 						<p><a href="/watch.html">Google IRL</a></p>
 						<span class="w3-small w3-tooltip"><a href="/channel.html">Markiplier<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
 					</div>
 					<div class="w3-col s4 w3-center">
-						<img alt="Video" height="150" width="250" src="https://i.ytimg.com/vi/xuCn8ux2gbs/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDw-c-usRaN5QpsHmmd8kqUoKVG1w" />
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://i.ytimg.com/vi/xuCn8ux2gbs/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDw-c-usRaN5QpsHmmd8kqUoKVG1w" /></a>
 						<p><a href="/watch.html">history of the entire world, i guess</a></p>
 						<span class="w3-small w3-tooltip"><a href="/channel.html">bill wurtz</a></span>
 					</div>
 					<div class="w3-col s4 w3-center">
-						<img alt="Video" height="150" width="250" src="https://i.ytimg.com/vi/-fyn26d7VyA/hqdefault.jpg?sqp=-oaymwEYCMQBEG5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLCX1HMKCk01LqM_GZ8IbNMjPsJUtQ" />
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://i.ytimg.com/vi/-fyn26d7VyA/hqdefault.jpg?sqp=-oaymwEYCMQBEG5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLCX1HMKCk01LqM_GZ8IbNMjPsJUtQ" /></a>
 						<p><a href="/watch.html">So... Ive Been Gone...(Update Video)</a></p>
 						<span class="w3-small w3-tooltip"><a href="/channel.html">PlanetNerdsTv</a></span>
 					</div>
@@ -61,27 +73,133 @@
 			
 			<hr>
 			
+			<!-- Watch Later Feed -->
 			<section id="watchlater">
 				<div class="w3-row w3-container w3-animate-bottom">
 					<h3>Watch Later</h3>
 					<div class="w3-col s4 w3-center">
-						<img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" />
-						<p><a href="/watch.html">Google IRL</a></p>
-						<span class="w3-small w3-tooltip"><a href="/channel.html">Markiplier<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Channel</a></span>
 					</div>
 					<div class="w3-col s4 w3-center">
-						<img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" />
-						<p><a href="/watch.html">history of the entire world, i guess</a></p>
-						<span class="w3-small w3-tooltip"><a href="/channel.html">bill wurtz</a></span>
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
 					</div>
+					<!--
 					<div class="w3-col s4 w3-center">
 						<img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" />
-						<p><a href="/watch.html">So... Ive Been Gone...(Update Video)</a></p>
-						<span class="w3-small w3-tooltip"><a href="/channel.html">PlanetNerdsTv</a></span>
-					</div>
+						<p><a href="/watch.html">NoVideo</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">NoChannel</a></span>
+					</div>-->
 				</div>
 			</section>
 			
+			<hr>
+			
+			<!-- Recently Uploaded Feed -->
+			<section id="recent">
+				<div class="w3-row w3-container w3-animate-bottom">
+					<h3>Recently Uploaded</h3>
+					<div class="w3-col s4 w3-center">
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Channel</a></span>
+					</div>
+					<div class="w3-col s4 w3-center">
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
+					</div>
+					<!--
+					<div class="w3-col s4 w3-center">
+						<img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" />
+						<p><a href="/watch.html">NoVideo</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">NoChannel</a></span>
+					</div>-->
+				</div>
+			</section>
+			
+			<hr>
+			
+			<!-- Hot Feed -->
+			<section id="hotvideos">
+				<div class="w3-row w3-container w3-animate-bottom">
+					<h3>Hot Videos</h3>
+					<div class="w3-col s4 w3-center">
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Channel</a></span>
+					</div>
+					<div class="w3-col s4 w3-center">
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
+					</div>
+					<!--
+					<div class="w3-col s4 w3-center">
+						<img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" />
+						<p><a href="/watch.html">NoVideo</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">NoChannel</a></span>
+					</div>-->
+				</div>
+			</section>
+			
+			<hr>
+			<!-- Gaming Feed -->
+			<section id="gaming">
+				<div class="w3-row w3-container w3-animate-bottom">
+					<h3>Gaming Videos</h3>
+					<div class="w3-col s4 w3-center">
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Channel</a></span>
+					</div>
+					<div class="w3-col s4 w3-center">
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
+					</div>
+					<!--
+					<div class="w3-col s4 w3-center">
+						<img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" />
+						<p><a href="/watch.html">NoVideo</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">NoChannel</a></span>
+					</div>-->
+				</div>
+			</section>
+			
+			<hr>
+			<!-- Tech Feed -->
+			<section id="tech">
+				<div class="w3-row w3-container w3-animate-bottom">
+					<h3>Tech Videos</h3>
+					<div class="w3-col s4 w3-center">
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Channel</a></span>
+					</div>
+					<div class="w3-col s4 w3-center">
+						<a href="/watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
+						<p><a href="/watch.html">Random Video</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
+					</div>
+					<!--
+					<div class="w3-col s4 w3-center">
+						<img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" />
+						<p><a href="/watch.html">NoVideo</a></p>
+						<span class="w3-small w3-tooltip"><a href="/channel.html">NoChannel</a></span>
+					</div>-->
+				</div>
+			</section>
+			<!-- Footer -->
+			<div class="w3-container w3-theme-d5">
+				<h4>YouTube</h4>
+				<p><a href="/about.html">About</a> | <a href="#">Press</a> | <a href="#">Copyright</a> | <a href="#">Advertise</a> | <a href="/developers.html">Developers</a></p>
+				<p class="w3-small w3-text-theme"><a href="/about.html">Terms</a> | <a href="#">Privacy</a> | <a href="#">Policy & Safety</a> | <a href="#">Send Feedback</a> &copy; 2019 Google, LLC</p>
+				
+			</div>
 		</div>
 		
 		<!-- Sidebar JavaScript -->
