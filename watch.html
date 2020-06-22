@@ -1,189 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!-- Title Page -->
-		<title>YouTube</title>
-		
-		<!-- Meta Info -->
-		<meta charset="utf-8"/>
-		<meta name="description" content="#YouTubeWeWant"/>
-		<meta name="author" content="TheCrafters001" />
-		
-		
-		<!-- CSS Imports -->
-		<link href="./css/w3.css" rel="stylesheet">
-		<link href="./css/w3pro.css" rel="stylesheet">
-		<link href="./css/w3-theme-youtube.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
+		<title>Watch Video - YouTube Concept</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.4/css/uikit.min.css"/>
+		<link href="css/styles.css" rel="stylesheet">
 	</head>
-	<body class="w3-theme">
-		<h3 align="center">DUE TO A CSS CHANGE, THIS PAGE IS BROKEN UNTIL I GET AROUND TO FIXING IT.</h3>
+	<body>
 		<!-- NavBar -->
-		<div class="w3-bar w3-theme-d5 w3-large" style="position:inline;">
-			<button id="openNav" class="w3-button w3-theme-d5 w3-bar-item w3-mobile" onclick="w3_open()">&#9776;</button>
-			<a href="./" class="w3-bar-item w3-button w3-mobile"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-			<input type="text" class="w3-bar-item w3-input w3-bar w3-white w3-mobile" placeholder="Search..">
-			<button class="w3-bar-item w3-button w3-green w3-mobile">Go</button>
-			
-			<!-- Right Side of NavBar -->
-			<a href="./signin.html" class="w3-bar-item w3-button w3-right"><i class="fa fa-user" aria-hidden="true"></i></a>
-			<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-bell" aria-hidden="true"></i><span class="w3-badge w3-margin-left w3-white w3-small">9+</span></a>
-			<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
-		</div>
+		<nav class="uk-navbar-container uk-margin" uk-navbar>
+			<div class="uk-navbar-center uk-animation-scale-up uk-transform-origin-top-center">
+				<div class="uk-navbar-left">
+					<ui class="uk-navbar-nav">
+						<li><button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-reveal"><span uk-icon="icon: menu"></span></button></li>
+					</ui>
+				</div>
+				<div class="uk-navbar-center-left"><div>
+					<ul class="uk-navbar-nav">
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="./trending.html">Trending</a></li>
+					</ul>
+				</div></div>
+				<a class="uk-navbar-item uk-logo" href="./index.html"><span uk-icon="icon: youtube"></span> YouTube</a>
+				<div class="uk-navbar-center-right"><div>
+					<ul class="uk-navbar-nav">
+						<li><a href="./signin.html">Subscriptions</a></li>
+						<li><a href="./signin.html">History</a></li>
+					</ul>
+				</div></div>
+		
+			</div>
+		</nav>
+		<!-- End NavBar -->
 		<!-- SideBar -->
-		<div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-theme-d5" style="display:none" id="mySidebar">
-			<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-			<a href="./" class="w3-bar-item w3-button w3-animate-bottom">Home</a>
-			<a href="#" class="w3-bar-item w3-button w3-animate-bottom">Trending</a>
-			<a href="./signin.html" class="w3-bar-item w3-button w3-animate-bottom">Subscriptions</a>
-			<a href="./signin.html" class="w3-bar-item w3-button w3-animate-bottom">History</a>
-			<hr>
-			<div class="w3-bar-item w3-animate-zoom">
-				<p>Subscriptions</p>
-				<div class="w3-container w3-theme-l2 w3-center">
-					<p>You are not signed into YouTube.<br>Please sign in to see your subscriptions.</p>
-					<a href="./signin.html" class="w3-button w3-theme-l5 w3-hover-theme">Sign In</a><br><br>
+		<div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
+			<div class="uk-offcanvas-bar">
+		
+				<button class="uk-offcanvas-close" type="button" uk-close></button>
+		
+				<h3><span uk-icon="icon: youtube"></span> YouTube Menu</h3>
+		
+				<p>Welcome to YouTube.</p>
+				<ul class="uk-list uk-list-striped">
+					<li><a href="./index.html">Home</li>
+					<li><a href="./trending.html">Trending</li>
+					<li><a href="./signin.html">Subscriptions</a></li>
+					<li><a href="./signin.html">History</a></li>
+				</ul>
+				<hr>
+				<div class="uk-card uk-card-default uk-card-body uk-animation-scale-up uk-transform-origin-top-center">
+					<h3 class="uk-card-title">Subscriptions</h3>
+					<p>Hi. If you want to access your subscriptions, you must sign in. Click the button below to do so.</p>
+					<a class="uk-button uk-button-primary" href="./signin.html">Sign In</a>
 				</div>
 			</div>
 		</div>
-		
-		<div id="main" class="w3-container">
-			<br>
-			<!-- Video Holder -->
-			<div class="w3-row w3-container">
-				<div class="w3-cell w3-col w3-theme w3-center">
-					<iframe width="640" height="480" src="https://www.youtube.com/embed/C0DPdy98e4c?autoplay=true" autoplay frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<br>
-					<div class="w3-theme-l3 w3-container">
-						<a href="./channel.html" class="w3-left"><img src="https://yt3.ggpht.com/a/AGF-l79kzVZIRd5X3AEINuB8NJG-YV0exz7vkyGGFg=s48-c-k-c0xffffffff-no-rj-mo" height="48" width="48" alt="commenticon"></img> Simon Yapp</a>
-						<p><b>Published on Feb 21, 2007</b></p>
-						<p>COUNTING LEADER AND TONE<br><br>Category<br>Film & Animation</p>
+		<!-- End SideBar -->
+
+		<!-- Page Content-->
+		<div class="uk-container">
+			<div class="uk-alert-warning" uk-alert>
+				<p>NOTICE: This concept is now activly being worked on. Please note that all pages will look diffrent till I get around to changing them.</p>
+			</div>
+			<div class="uk-text-center" uk-grid>
+				<div class="uk-width-expand@m">
+					<div class="uk-card uk-card-default uk-card-body">
+						<div class="player" id="player"></div>
 					</div>
 				</div>
-				<!-- Suggested and Comments -->
-				<div class="w3-cell w3-dark-grey w3-col w3-center">
-					<div class="w3-bar w3-black">
-						<button class="w3-bar-item w3-button" onclick="opentab('Suggested')">Suggested</button>
-						<button class="w3-bar-item w3-button" onclick="opentab('Comments')">Comments</button>
-					</div>
-					<div id="Suggested" class="w3-container tab">
-						<h2>Suggested</h2>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Channel</a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Channel</a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Channel</a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Channel</a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Channel</a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Channel</a></span>
-						</div>
-						<div class="w3-center">
-							<a href="./watch.html"><img alt="Video" height="150" width="250" src="https://via.placeholder.com/250x150" /></a>
-							<p><a href="./watch.html">Random Video</a></p>
-							<span class="w3-small w3-tooltip"><a href="./channel.html">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></a></span>
-						</div>
+				<div class="uk-width-auto@m">
+					<div class="uk-card uk-card-default uk-card-body">
+						<ul uk-tab>
+							<li><a href="#">Comments</a></li>
+							<li><a href="#">Description</a></li>
+						</ul>
 						
-					</div>
-					<div id="Comments" class="w3-container w3-animated-zoom tab" style="display:none">
-						<h2>Comments</h2>
-						<input type="text" class="w3-bar-item w3-input w3-bar w3-white w3-mobile" placeholder="Enter your comment..">
-						<button class="w3-bar-item w3-button w3-green w3-mobile">Post</button>
-						
-						<div class="w3-container w3-border">
-							<a href="./channel.html" class="w3-left"><img src="https://yt3.ggpht.com/a/AGF-l79kzVZIRd5X3AEINuB8NJG-YV0exz7vkyGGFg=s48-c-k-c0xffffffff-no-rj-mo" height="48" width="48" alt="commenticon"></img> Simon Yapp</a>
-							<p class="w3-center">Hey there! Thank you for checking out the video!</p>
-						</div>
-						<div class="w3-container w3-border">
-							<a href="./channel.html" class="w3-left"><img src="https://via.placeholder.com/48x48" height="48" width="48" alt="commenticon"></img> Random Channel</a>
-							<p class="w3-center">Hey. Nice Video.</p>
-						</div>
-						<div class="w3-container w3-border">
-							<a href="./channel.html" class="w3-left"><img src="https://via.placeholder.com/48x48" height="48" width="48" alt="commenticon"></img> <span class="w3-small w3-tooltip">Random Verified Channel<i class="fa fa-check-square-o" aria-hidden="true"></i><span class="w3-text w3-tag w3-animate-opacity">Verified</span></span></a>
-							<p class="w3-center">This is funny XD (I feel sorry for whoever reads this.)</p>
-						</div>
-						
+						<ul class="uk-switcher uk-margin">
+							<li>Coming Soon.</li>
+							<li>
+								Coming Soon.<br>
+								YouTube's API likes to make things a pain,<br>
+								so I am going to try to figure out how to<br>
+								use it. At least I got the videos working,<br>
+								right?
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-			
-			<br>
-			<!-- Footer -->
-			<div class="w3-container w3-theme-d5">
-				<h4>YouTube</h4>
-				<p><a href="./about.html">About</a> | <a href="#">Press</a> | <a href="#">Copyright</a> | <a href="#">Advertise</a> | <a href="./developers.html">Developers</a></p>
-				<p class="w3-small w3-text-theme"><a href="./about.html">Terms</a> | <a href="#">Privacy</a> | <a href="#">Policy & Safety</a> | <a href="#">Send Feedback</a> &copy; 2019 Google, LLC</p>
-				
-			</div>
+		</div> 
+		<!-- End Page Content-->
+
+		<!-- Footer -->
+		<div class="uk-container">
+			<p><a class="uk-navbar-item uk-logo" href="./index.html"><span uk-icon="icon: youtube"></span> YouTube</a></p>
+			<p><a href="./about.html">About</a> | <a href="#">Press</a> | <a href="#">Copyright</a> | <a href="#">Advertise</a> | <a href="./developers.html">Developers</a></p>
+			<p class="uk-link-muted"><a href="./about.html">Terms</a> | <a href="#">Privacy</a> | <a href="#">Policy & Safety</a> | <a href="#">Send Feedback</a> &copy; 2019 Google, LLC</p>
 		</div>
-		
-		<!-- Sidebar & Tabs JavaScript -->
-		<script> 
-		function w3_open() {
-			document.getElementById("main").style.marginLeft = "25%";
-			document.getElementById("mySidebar").style.width = "25%";
-			document.getElementById("mySidebar").style.display = "inline-block";
-			document.getElementById("openNav").style.display = 'none';
-		}
-			function w3_close() {
-			document.getElementById("main").style.marginLeft = "0%";
-			document.getElementById("mySidebar").style.display = "none";
-			document.getElementById("openNav").style.display = "inline-block";
-		}
-		function opentab(tabName) {
-			var i;
-			var x = document.getElementsByClassName("tab");
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";  
+		<!-- End Footer -->
+
+		<!-- Watch Video Scripting -->
+		<script>
+			var urlParams = new URLSearchParams(window.location.search); // Get URL Params
+			console.log(urlParams.get('v')); // Print YouTube URL after watch/?v=
+
+			// 2. This code loads the IFrame Player API code asynchronously.
+			var tag = document.createElement('script');
+
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			// 3. This function creates an <iframe> (and YouTube player)
+			//    after the API code downloads.
+			var player;
+
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('player', {
+					height: '480',
+					width: '640',
+					videoId: urlParams.get('v'), // Get URL Param and use the value from ?v=
+					autoplay: 1,
+					events: {
+						'onReady': onPlayerReady,
+						'onStateChange': onPlayerStateChange
+					}
+				});
 			}
-			document.getElementById(tabName).style.display = "block";  
-		}
+
+			// 4. The API will call this function when the video player is ready.
+			function onPlayerReady(event) {
+				event.target.playVideo();
+			}
+
+			// 5. The API calls this function when the player's state changes.
+			//    The function indicates that when playing a video (state=1),
+			//    the player should play for six seconds and then stop.
+			var done = true;
+
+			function onPlayerStateChange(event) {
+				if (event.data == YT.PlayerState.PLAYING && !done) {
+					setTimeout(stopVideo, 6000);
+					done = true;
+				}
+			}
+
+			function stopVideo() {
+				player.stopVideo();
+			}
 		</script>
+		<!-- End Watch Video Scripting -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.4/js/uikit.min.js" 
+				integrity="sha256-8QekXFS5Mxv+c4TrPQY01b+3GUCDKMEtUT4hwe79u+U=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.5.4/js/uikit-icons.min.js" 
+				integrity="sha256-ePbnCL/UfOwc7bXqeMgyTNf6wM1HoqaY1ZeDQWYSJ9Y=" crossorigin="anonymous"></script>
 	</body>
 </html>
